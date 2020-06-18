@@ -1,14 +1,12 @@
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_is_negative(int n){
-    if(n < 0){
-        putchar(78);
-    }else if(n > 0){
-        putchar(80);
-    }
+int ft_putchar(char c)
+{
+    write(1, &c, 1);
 }
 
-int main(){
-    ft_is_negative(2);
-    return 0;
+void ft_is_negative(int n)
+{
+    n >= 0 ? ft_putchar('P') : ft_putchar('N');
+    ft_putchar('\n');
 }

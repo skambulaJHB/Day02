@@ -1,14 +1,17 @@
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_print_alphabet(void){
-    for(int i = 97; i<=122; i++){
-        putchar(i);
-    }
-    
+void ft_putchar(char character)
+{
+    write(1, &character, 1);
 }
 
-
-int main(){
-    ft_print_alphabet();
-    return 0;
+void ft_print_alphabet(void)
+{
+    char alphabet = 'a';
+    while (alphabet <= 'z')
+    {
+        ft_putchar(alphabet);
+        alphabet++;
+    }
+    ft_putchar('\n');
 }

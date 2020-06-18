@@ -1,14 +1,17 @@
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_print_reverse_alphabet(void){
-    for(int i = 122; i>=97; i--){
-        putchar(i);
-    }
-    
+void ft_putchar(char character)
+{
+    write(1, &character, 1);
 }
 
-
-int main(){
-    ft_print_reverse_alphabet();
-    return 0;
+void ft_print_alphabet(void)
+{
+    char alphabet = 'z';
+    while (alphabet >= 'a')
+    {
+        ft_putchar(alphabet);
+        alphabet--;
+    }
+    ft_putchar('\n');
 }
