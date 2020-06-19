@@ -1,10 +1,14 @@
+
 int ft_putchar(char c);
+// {
+//     return write(1,&c,1);
+// }
 
 void printnum(char c1, char c2, char c3)
 {
     ft_putchar(c1);
     ft_putchar(c2);
-    ft_putchar(c3);
+    ft_putchar(c3); 
     if (c1 != '7' || c2 != '8' || c3 != '9')
     {
         ft_putchar(',');

@@ -1,9 +1,9 @@
-#include <unistd.h>
-
-void ft_putchar(char character)
+void ft_putchar(char character);
+/*
 {
-    write(1, &character, 1);
+    //write(1, &character, sizeof(character));
 }
+*/
 
 void ft_print_alphabet(void)
 {
